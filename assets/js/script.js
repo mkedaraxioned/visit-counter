@@ -7,24 +7,39 @@ $(document).ready(function() {
     var counter2 = $(".counter2");
     var counter3 = $(".counter3");
     var max1 = 2523,max2=63075,max3=12218;
-    var max =[2523,63075,12218];
-
-
-    var counter =[counter1,counter2,counter3];
-    for(var i=0;i<max.length;i++)
-    {
-        start_counter(counter[i],max[i]);
-    }
-
-    function start_counter(counter,max) {
-        var current = parseInt(counter.html());
-        counter.text(current+10);
-        if (current< max-10) {
-            setTimeout(start_counter,10);
-          current++; 
+   
+    function start_counter1() {
+         var current1 = parseInt(counter1.html());
+         if (current1< max1) {
+            counter1.text(current1+1);
+            setInterval(start_counter1,1);
+          current1++; 
         }
-    }      
-    
+    }  
+
+    function start_counter2() {
+       var current2 = parseInt(counter2.html());
+       if (current2< max2) {
+          counter2.text(current2+1);
+          setInterval(start_counter2,1);
+        current2++; 
+       }
+    }  
+
+    function start_counter3() {
+        var current3 = parseInt(counter3.html());
+        if (current3< max3) {
+        counter3.text(current3+1);
+        setInterval(start_counter3,1);
+        current3++; 
+    }
+    }  
+
+
+
+  start_counter1();    
+  start_counter2();    
+  start_counter3();    
 
 });
 
