@@ -12,7 +12,7 @@ $(document).ready(function() {
          var current1 = parseInt(counter1.html());
          if (current1< max1) {
             counter1.text(current1+1);
-            setInterval(start_counter1,1);
+            setInterval(start_counter1,10);
           current1++; 
         }
     }  
@@ -30,7 +30,7 @@ $(document).ready(function() {
         var current3 = parseInt(counter3.html());
         if (current3< max3) {
         counter3.text(current3+1);
-        setInterval(start_counter3,1);
+        setInterval(start_counter3,5);
         current3++; 
     }
     }  
